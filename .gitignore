@@ -1,0 +1,5 @@
+__pycache__/
+/lcd-screenshot_venv/*
+
+# Do not include project files
+*.lcd_project

@@ -1,0 +1,24 @@
+{
+  "presets": [
+    {
+      "name": "Yellow LCD",
+      "settings": {
+        "rows": 4,
+        "cols": 20,
+        "style": {
+          "background": "#d8f245",
+          "frame": "#000000",
+          "pixel_on": "#141f14",
+          "pixel_off": "#cde543",
+          "border_radius": 12,
+          "padding": 16,
+          "pixel_size": 3,
+          "pixel_gap": 1,
+          "char_gap": 4,
+          "row_gap": 10,
+          "frame_width": 8
+        }
+      }
+    }
+  ]
+}
