@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+    <head>
+        <meta charset="utf-8">
+        <meta name="description"
+              content="A GUI for LCD-Screenshot, a tool to make screenshot like images of HD44780-like LCDs.">
+        <meta name="keywords"
+              content="LCD, HD44780, screenshot, image, generator, GUI, pywebview">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Bootstrap demo</title>
+        <link rel="stylesheet"
+              href="{{ url_for('static',filename='css/bootstrap.css') }}" />
+    </head>
+    <body class="min-vh-100 d-flex flex-column ">
+        <nav class="navbar fixed-top navbar-expand-md bg-body-tertiary g-4 p-12 mb-3">
+            <div class="container-fluid">
+                <a class="navbar-brand">LCD-Screenshot</a>
+                <button class="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbarNavDropdown"
+                        aria-controls="navbarNavDropdown"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </nav>
+        <!-- Main Content-->
+        <div id="main-content" class="container-fluid  mt-5 pt-4  flex-grow-1">
+            {% block content %}{% endblock %}
+        </div>
+        <script>window.token = "{{ token }}";</script>
+        <script src="{{ url_for('static',filename='js/bootstrap.bundle.js') }}"></script>
+        <script src="{{ url_for('static',filename='js/main.js') }}"></script>
+    </body>
+</html>

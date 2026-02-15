@@ -1,0 +1,27 @@
+{% extends "template.html" %}
+{% block content %}
+    <div class="row row-cols-2 flex-grow-1">
+        <div class="col-4  ">
+            <div class="row">
+                <label for="text-input" class="form-label">Bitte Text eingeben:</label>
+                <textarea class="form-control"
+                          id="text-input"
+                          rows="4"
+                          cols="20"
+                          oninput="refreshLCD()"></textarea>
+            </div>
+            <div class="row">
+                <button class="btn btn-primary mt-3" onclick="saveScreenshot()">Screenshot speichern</button>
+            </div>
+        </div>
+        <div class="col-8 ">
+            <div class="row">
+                <!-- LCD-Screenshot -->
+                <div class="col lcd-screenshot w-100 p-3 rounded">
+                    <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+                    <div id="lcd-screenshot-content">{% include "img/lcd.svg" %}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
