@@ -24,3 +24,11 @@ def load_font_map(
 
 
 BITMAP = load_font_map()
+
+
+def get_bitmap_keys() -> List[str]:
+    return list(BITMAP.keys())
+
+
+if __name__ == "__main__":
+    print(get_bitmap_keys())
